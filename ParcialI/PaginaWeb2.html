@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Convertir Celcius a Fahrenheits</title> 
+</head> 
+<body> 
+    <div class="father"> 
+        <h2>Convierte grados celcius a fahrenheits</h2> 
+        <input type="number" id="celcius"><br> 
+        <input type="submit" value="Convertir" id="convertir"> 
+         
+        <div class="output" id="output"> 
+            <span id="result">RESPUESTA </span> 
+        </div> 
+    </div> 
+     
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> 
+    <script> 
+        $(document).ready(e => { 
+            let enviar = $('#convertir')[0], 
+                celcius = $('#celcius')[0]; 
+     
+            enviar.onclick = e => { 
+                $.post("http://localhost:3006", celcius.value, response => { 
+                    $('#result').text(response); 
+                }); 
+            } 
+        }); 
+    </script> 
+</body>
