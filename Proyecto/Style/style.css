@@ -1,0 +1,217 @@
+
+#logo{
+    border-color: #fca311;
+    border-style: solid;
+    border-radius: 20px;
+}
+.letrasxl{
+    text-align: center;
+    color: #fca311;
+    font-size: 140px; 
+}
+.menu{
+    box-align: center;
+}
+
+.letrasMenu{
+    text-align: center;
+    color: #fca311;
+    font-size: 20px;
+}
+.letrasMenu:hover{
+    color: #e5e5e5;
+    border-bottom: 6px solid #fca311;
+    background-color: #000814;
+}
+
+body{
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #000814;
+    text-align: center;
+}
+.links {
+    color: #fca311;
+}
+.links:visited {
+    color: #e5e5e5;
+}
+.titulo2{
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+}
+.LabelLogin{
+    margin: 15px;
+    text-align: center;
+    color: #e5e5e5;
+    font-size: 30px;
+    font: bold;
+}
+.inputLogin{
+    text-align: center;
+    border-color: #e5e5e5;
+    border-style: solid;
+    border-radius: 20px;
+    font-size: 20px;
+    font: bold;
+    color: #e5e5e5;
+}
+#login{
+    width: 100%;  
+}
+#formLogin{
+    margin: 1rem;
+    padding: 1rem;
+    border: 5px solid #fca311;
+    
+}
+#btnLogin{
+    margin: 1rem;
+    padding: 1rem;
+    border: 5px solid #fca311;
+    border-radius: 30px;
+    background-color: #fca311;
+    color: #000814;
+    font-size: 20px;
+    font: bold;
+}
+/*#CamposC{
+    margin-top: 2rem;
+    width: 50%;
+    float: left;
+}
+
+#tblClientes{
+    margin-top: 2rem;
+    width: 50%;
+    float: right;
+}*/
+
+.LabelC{
+    margin: 5px;
+    text-align: left;
+    color: #e5e5e5;
+    font-size: 20px;
+    font: bold;
+}
+.inputC{
+    text-align: left;
+    border-color: #e5e5e5;
+    border-style: solid;
+    border-radius: 15px;
+    font-size: 17px;
+    font: bold;
+    color: #e5e5e5;
+}
+.btnC{
+    margin-top: 20px;
+    border: 2px solid #fca311;
+    border-radius: 30px;
+    background-color: #000814;
+    color: #fca311;
+    font-size: 20px;
+    font: bold;
+}
+.btnC:hover{
+    background-color: #fca311;
+    color: #000814;
+}
+#cliente{
+    border: 5px #fca311 solid;
+    outline-offset: 15px;
+}
+#cliente{
+    border: 5px solid #fca311;
+}
+
+#txtBuscarC{
+    text-align: left;
+    border-color: #e5e5e5;
+    border-style: solid;
+    border-radius: 15px;
+    font-size: 20px;
+    font: bold;
+    color: #e5e5e5;
+    width: 80%;
+}
+
+thead, th, td {
+    border-bottom: 2px solid #fca311;
+
+}
+th, td{
+    color: #fca311;
+}
+.titulo3{
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+}
+.LabelP{
+    margin: 5px;
+    text-align: left;
+    color: #e5e5e5;
+    font-size: 20px;
+    font: bold;
+}
+.inputP{
+    text-align: left;
+    border-color: #e5e5e5;
+    border-style: solid;
+    border-radius: 15px;
+    font-size: 17px;
+    font: bold;
+    color: #e5e5e5;
+}
+#edadC{
+    width: 100px;
+    text-align: center;
+
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btnEC{
+    margin-top: 20px;
+    border: 2px solid #e5e5e5;
+    border-radius: 30px;
+    background-color: #000814;
+    color: #e5e5e5;
+    font-size: 20px;
+    width: 30px;
+    font: bold;
+}
+.btnEC:hover{
+    background-color: #e5e5e5;
+    color: #000814;
+}
+.selecciones{
+    border: 2px solid #e5e5e5;
+    border-radius: 15px;
+    background-color: #000814;
+    color: #e5e5e5;
+    font-size: 20px;
+    font: bold;
+}
+.selecciones:target{
+    background-color: #000814;
+    color: #e5e5e5;
+}
+#interes{
+    width: 60px;
+}
+.nombre{
+    color: #e5e5e5;
+}
+#txtcuotas{
+    font-size: 25px;
+}
+#cantidad, #meses{
+    width: 80px;
+}
+ *{
+    background-color: #000814;
+}

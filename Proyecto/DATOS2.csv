@@ -1,0 +1,53 @@
+abierta;moroso;trabajo;sueldo;cuota;resultado
+1;1;1;354;50;¡DENEGADO! Es moroso
+0;0;1;354;50;¡ACEPTADO! Cumple con todos los requisitos
+1;1;0;400;80;¡DENEGADO! Es moroso
+1;0;1;400;80;¡ACEPTADO! Cumple con todos los requisitos
+0;1;1;450;50;¡DENEGADO! Es moroso
+0;0;0;0;100;¡DENEGADO! Su sueldo es menor que la cuota 
+1;0;0;0;320;¡DENEGADO! Su sueldo es menor que la cuota 
+0;0;1;500;150;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;560;170;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;300;350;¡DENEGADO! Su sueldo es menor que la cuota 
+0;0;1;340;370;¡DENEGADO! Su sueldo es menor que la cuota 
+1;0;0;0;370;¡DENEGADO! Su sueldo es menor que la cuota 
+1;1;1;500;50;¡DENEGADO! Es moroso
+0;0;1;600;50;¡ACEPTADO! Cumple con todos los requisitos
+0;1;1;750;100;¡DENEGADO! Es moroso
+1;0;1;750;100;¡ACEPTADO! Cumple con todos los requisitos
+0;0;1;300;50;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;360;100;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;340;80;¡ACEPTADO! Cumple con todos los requisitos
+0;1;1;740;100;¡DENEGADO! Es moroso
+0;0;1;350;78;¡ACEPTADO! Cumple con todos los requisitos
+0;0;0;0;60;¡DENEGADO! Su sueldo es menor que la cuota 
+0;0;1;320;180;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;550;120;¡ACEPTADO! Cumple con todos los requisitos
+1;1;1;500;50;¡DENEGADO! Es moroso
+1;0;1;1000;120;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;1500;50;¡ACEPTADO! Cumple con todos los requisitos
+0;0;1;1200;200;¡ACEPTADO! Cumple con todos los requisitos
+1;1;1;1000;69;¡DENEGADO! Es moroso
+0;1;1;800;300;¡DENEGADO! Es moroso
+1;0;1;300;300;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+1;0;1;450;450;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+0;0;1;800;800;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+0;0;1;1000;1000;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+1;0;1;650;650;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+1;0;1;487;254;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;236;34;¡ACEPTADO! Cumple con todos los requisitos
+0;0;1;678;130;¡ACEPTADO! Cumple con todos los requisitos
+1;1;1;763;257;¡DENEGADO! Es moroso
+1;1;1;868;100;¡DENEGADO! Es moroso
+1;0;1;353;20;¡ACEPTADO! Cumple con todos los requisitos
+0;1;1;465;100;¡DENEGADO! Es moroso
+1;0;1;790;800;¡DENEGADO! Su sueldo es menor que la cuota 
+1;0;0;0;12;¡DENEGADO! Su sueldo es menor que la cuota 
+0;0;1;879;798;¡ACEPTADO! Cumple con todos los requisitos
+1;0;0;0;789;¡DENEGADO! Su sueldo es menor que la cuota 
+1;0;1;899;789;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;500;400;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+0;0;1;150;140;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+1;0;1;350;100;¡ACEPTADO! Cumple con todos los requisitos
+1;0;1;550;450;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota
+1;0;1;360;300;¡DENEGADO! Su sueldo es muy ajustado para pagar la cuota

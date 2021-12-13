@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="Style/style.css">
+        <title>Prestamo</title>
+        <h1 class="letrasxl" id="logo">Prestamos A.B.M.J</h1> 
+    </head>
+    
+    <header>
+       <section class="menu">
+        <div class="container-sm">
+            <div class="row align-items-start">
+              <div class="col">
+                <a class="letrasMenu" href="index.html">Iniciar sesion</a>
+              </div>
+              <div class="col">
+               <a class="letrasMenu" href="clientes.html">Clientes</a>
+              </div>
+              <div class="col">
+                <a class="letrasMenu" href="">Solicitud Prestamos</a>
+              </div>
+          
+            </div>
+       </section>
+    </header>
+<body>
+  <section id="prestamos">
+    <form data-accion="nuevo" data-idprestamo="0" id="formPrestamo">
+        <h2 class="titulo3">Prestamos</h2>
+        <div id="CamposC">
+          <div>
+            <label class="LabelP" for="DUIC">DUI del Cliente:</label>
+            <input required pattern="[0-9]{9}" class="inputP" type="text" name="DUIC" id="DUIP" placeholder="DUI">
+          </div>
+          <div>
+            <label class="LabelP" for="prestamo">Cantidad:</label>
+            <input required pattern="[0-9]"class="inputP" type="number" name="Prestamos" id="prestamo" placeholder="prestamo" >
+          </div>
+          <div>
+            <label class="LabelP" for="interes">Interes:</label>
+            <input required pattern="[0-9]"class="inputP" type="number" name="Interes" id="interes" min="10" placeholder="%">
+            <label class="LabelP">%</label>
+            <button id="btn+C" class="btnEC" type="button" onclick="incrementar_interes()">+</button>
+            <button id="btn-C" class="btnEC" type="button" onclick="decrementar_interes()">-</button>
+          </div>
+          <div>
+            <label id="txtcuotas" class="LabelP" for="cuotas">Cuotas:</label>
+   
+            <label class="LabelP" id="lblCant" for="Cantidad">Cant.: </label>
+            <input required pattern="[0-9]" class="inputP" type="number" name="Cantidad" id="Coutas_Cant" min="1" placeholder="cant">
+            <button id="btn+P" class="btnEC" type="button" onclick="incrementar_cant()">+</button>
+            <button id="btn-P" class="btnEC" type="button" onclick="decrementar_cant()">-</button>
+            
+            <label class="LabelP">|</label>
+            <label class="LabelP" for="Meses">Meses: </label>
+            <input required pattern="[0-9]" class="inputP" type="number" name="Meses" id="meses" min="1" placeholder="Meses">
+            <button id="btn+M" class="btnEC" type="button" onclick="incrementar_meses()">+</button>
+            <button id="btn-M" class="btnEC" type="button" onclick="decrementar_meses()">-</button>
+
+          </div>
+          <div>
+            <label class="LabelP" for="fecha">Fecha:</label>
+            <input required pattern="[0-9]" class="inputP" type="date" name="Fecha" id="fecha" placeholder="fecha">
+          </div>
+          <div>
+            <label class="LabelP" for="sueldo">Sueldo:</label>
+            <input required pattern="[0-9]"class="inputP" type="number" name="sueldo" id="sueldo" placeholder="Sueldo">
+          </div>
+        </div>
+        <div>
+          <label class="LabelP" for="EstadoP">Prestamo Activo:</label>
+          <select name="EstadoP" id="EstadoP" class="selecciones">
+              <option value="Activo">Si</option>
+              <option value="Cancelado">No</option>
+          </select>
+        </div>
+        <div>
+          <button id="btnNuevoC" class="btnC" type="submit" name="Nuevo">Nuevo</button>
+          <button id="btnActualizarC" class="btnC" type="button" name="Guardar">Actualizar</button>
+          <button id="btnEliminarC" class="btnC" type="button" name="Eliminar">Eliminar</button>
+        </div>
+      </div>
+      <div id="alertaP" class="alert alert-success d-none" role="alert">Hola</div>
+    </form>
+    <div id="tblPrestamosdiv">
+      <input id="txtBuscarC" type="text" placeholder="Buscar">
+      <button id="btnBuscarC" class="btnC" type="button" name="Buscar">Buscar</button>
+      <table id="tblPrestamos" class="table">
+          <thead>
+            <tr>
+              <th colspan="9">
+                  <input class="form-control" placeholder="Buscar Prestamos" type="text" 
+                      name="txtBuscarPrestamo" id="txtBuscarPrestamo">
+              </th>
+          </tr>
+            <tr>
+              <th scope="col">DUI</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Interes</th>
+              <th scope="col">Coutas_Cant</th>
+              <th scope="col">Coutas_Meses</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Sueldo</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+          </tbody>
+        </table>
+  </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" 
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script>
+      function incrementar_cant(){
+        let cantidad = document.getElementById("Coutas_Cant").value;
+        cantidad++;
+        document.getElementById("Coutas_Cant").value = cantidad;
+      }
+      function decrementar_cant(){
+        let cantidad = document.getElementById("Coutas_Cant").value;
+        cantidad--;
+        document.getElementById("Coutas_Cant").value = cantidad;
+      }
+      function incrementar_meses(){
+        let meses = document.getElementById("meses").value;
+        meses++;
+        document.getElementById("meses").value = meses;
+      }
+      function decrementar_meses(){
+        let meses = document.getElementById("meses").value;
+        meses--;
+        document.getElementById("meses").value = meses;
+      }
+      function incrementar_interes(){
+        let interes = document.getElementById("interes").value;
+        interes++;
+        document.getElementById("interes").value = interes;
+      }
+      function decrementar_interes(){
+        let interes = document.getElementById("interes").value;
+        interes--;
+        document.getElementById("interes").value = interes;
+      }
+      function calcular_cuotas(){
+        let meses = $("#meses").val();
+        let cant_prestamo = $("#prestamo").val();
+        let interes = $("#interes").val();
+        let interesMath = interes/100;
+        let pago = cant_prestamo*interesMath;
+        let suma = cant_prestamo + pago;
+        let cuotas = suma/meses;
+        console.log("prestamo: ", cant_prestamo);
+        console.log("meses: ", meses);
+        console.log("Interes: ", interesMath);
+        console.log("interes + cantidad: ", pago);
+        console.log("suma: ", suma);
+        console.log("total: ", cuotas);
+        console.log("------------");
+        $("#Coutas_Cant").val(cuotas);
+      }
+
+
+      function consultar_prestamo(){
+        $.get("http://localhost:3000/consultar_prestamos", (data) => {
+          data = data.resultado;
+          let html = "";
+          console.log("los datos: ", data);
+          data.forEach(element => {
+            html += `<tr onclick='actualizarPrestamo(${JSON.stringify(data)})'>
+              <td>${element.DUI}</td>
+              <td>${element.Cantidad}</td>
+              <td>${element.Interes}</td>
+              <td>${element.Cuotas_Cant}</td>
+              <td>${element.Cuotas_Meses}</td>
+              <td>${element.Fecha}</td>
+              <td>${element.Sueldo}</td>
+              <td>${element.Estado}</td>
+
+              <td>
+                <button class="btn btn-danger" onclick='eliminarPrestamo(${JSON.stringify(element)})'>Eliminar</button>    
+              </td>
+            </tr>`;
+          });
+          $("#tblPrestamos tbody").html(html);
+        }, "json");
+      }
+
+      function eliminarPrestamo(data){
+        if(confirm(`¿Desea eliminar el prestamo de? ${data.DUI}`)){
+          let accion = "eliminar",
+            id_Prestamo = data.id_Prestamo,
+            datos = {accion, id_Prestamo};
+          console.log("id: ", id_Prestamo);
+          $.post("http://localhost:3000/administrar_prestamos", JSON.stringify(datos), (dato) =>{
+            console.log("eliminado: ", dato);
+            consultar_prestamo();
+          }, "json");
+        }
+      }
+
+      function actualizarPrestamo(data){
+        $("#DUI").val(data[0].DUI);
+        $("#prestamo").val(data[0].Cantidad);
+        $("#interes").val(data[0].Interes);
+        $("#meses").val(data[0].Cuotas_Meses);
+        $("#Coutas_Cant").val(data[0].Cuotas_Cant);
+        $("#fecha").val(data[0].Fecha);
+        $("#sueldo").val(data[0].Sueldo);
+        $("#estado").val(data[0].Estado);
+      }
+
+      function mostrarAlerta(mensaje){
+        $("#alertaP").removeClass("d-none");
+        $("#alertaP").html(mensaje);
+        setTimeout(() => {
+          $("#alertaP").addClass("d-none");
+        }, 3000);
+      }
+
+      function limpiar(){
+        $("#formPrestamo").data("accion", "nuevo").data("id_prestamo", 0);
+        $("#formPrestamo input[type=text]").val("");
+      }
+
+      $(document).ready(() => {
+        consultar_prestamo();
+        /*$("#meses").keyup(() => {
+          calcular_cuotas();
+        });*/
+
+        $("#formPrestamo").on("reset", e => {limpiar(); }).submit(e => {
+          e.preventDefault();
+          let accion = $("#formPrestamo").data("accion"),
+              id_prestamo = $("#formPrestamo").data("idprestamo"),
+              DUI = $("#DUIP").val(),
+              Cantidad = $("#prestamo").val(),
+              Interes = $("#interes").val(),
+              Cuotas_Cant = $("#Coutas_Cant").val(),
+              Cuotas_Meses = $("#meses").val(),
+              Fecha = $("#fecha").val(),
+              Sueldo = $("#sueldo").val(),
+              Estado = $("#EstadoP").val(),
+              datos = {accion, id_prestamo, DUI, Cantidad, Interes, Cuotas_Cant, Cuotas_Meses, Fecha, Sueldo, Estado};
+
+              console.log("Entra al post con: ");
+              console.log(datos);
+              console.log(accion);
+              console.log(id_prestamo);
+
+              $.post("http://localhost:3000/administrar_prestamos", JSON.stringify(datos), (data, status) => {
+                if(data.resultado.indexOf("Error") != -1){
+                  consultar_prestamo();
+                  limpiar();
+
+                  $alertaP = $("#alertaP").removeClass("alert-danger").addClass("alert-success").html(data.resultado); 
+                }else{
+                  $alertaP = $("#alertaP").removeClass("alert-success").addClass("alert-danger").html(data.resultado);
+                }
+                mostrarAlerta(data.resultado);
+              }, "json");
+        });
+        
+        $("#txtBuscarPrestamo").keyup(function(e){
+          let valor = $(this).val(), $tblPrestamos = ("#tblPrestamos > tbody >tr"); 
+          $tblPrestamos.show();
+
+          let $no_encontrado = $tblPrestamos.filter(function(i, fila){
+            return $(this).find("td:not(:last)").text().toLowerCase().indexOf(valor.toLowerCase()) == -1;
+          });
+
+          $no_encontrado.hide();
+        });
+        
+      });
+    </script>
+</body>
+<footer>
+  <a target="_blank" class="links" href="https://github.com/">Github</a>
+  <p class="nombre">ProgramacionIII Proyecto Final</p>
+</footer>
+</html>
